@@ -1,5 +1,12 @@
+
+
 .App {
   text-align: center;
+  padding-top: 10px;
+}
+
+h1,h2,h3,h4 {
+  color: #0f2726;
 }
 
 .App-logo {
@@ -7,32 +14,135 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  object-fit: cover;
+  height: auto;
+  width: 200px;
+  border-radius: 0.25rem;  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.btn {
+  border-radius: 4px;
+
+  background-color: lightblue;
+  border: none;
+  font-size: 16px;
+  margin: 10px 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.btn:hover {
+  background-color: rgb(126, 236, 126);
+ 
+  overflow: hidden;
+  transition-duration: .5s;
+}
+
+.active {
+  padding: 5px 10px;
+  background-color: rgb(126, 236, 126);
+}
+
+.btn-handle {
+  padding: 7px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: lightpink;
+  border: none;
+  border-radius: 3px;
+  transition-duration: .2s;
+}
+
+.btn-handle:hover {
+  background-color: rgb(250, 56, 88);
+  color: rgb(238, 238, 238);
+}
+
+.cart {
+  border-radius: 4px;
+
+  border: none;
+  font-size: 16px;
+  margin: 10px 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: rgb(250, 56, 88);
+  color: rgb(238, 238, 238);
+}
+
+.search-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  margin: 7px 0 0 0;
 }
 
-.App-link {
-  color: #61dafb;
+.search {
+  font-size: 15px;
+  padding: 5px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.search-clear {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.menu-items {
+  text-align: center;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px 0;
+}
+
+@media screen and (max-width: 1300px) {
+  .menu-items {
+    grid-template-columns: 1fr;
+    grid-gap: 15px 0;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .menu-item {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+}
+
+.menu-item {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.menu-desc {
+  margin: 20px 0 30px 0;
+}
+
+.item-info {
+  padding: 10px 10px 0 10px;
+  width: 300px;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-img img {
+  border: 5px solid rgb(249, 133, 153);
+  border-radius: 3px;
+  width: 300px;
+}
+
+.servings {
+  margin-left: 10px;
+}
+
+
