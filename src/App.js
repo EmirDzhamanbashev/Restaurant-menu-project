@@ -7,7 +7,7 @@ import Search from "./components/Search";
 import logo from "./logo.png";
 
 function App() {
-  const [categories, setCategories] = useState(allCategories);
+  const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState("all");
   const [menuItems, setMenuItems] = useState(data);
   const [searchItems, setSearchItems] = useState("");
@@ -17,9 +17,11 @@ function App() {
   useEffect(() => {
     const mealsFromStorage = JSON.parse(localStorage.getItem("cartMeals"));
     setCartItems(mealsFromStorage ?? []);
+    setCategories(allCategories);
   }, []);
 
   const filterItems = (category) => {
+   
     setActiveCategory(category);
     if (category === "all") {
       setMenuItems(data);
